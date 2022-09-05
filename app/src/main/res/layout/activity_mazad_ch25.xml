@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mazad_ch25">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:title="CH2"
+                app:titleTextColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:0"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tv_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30"
+        android:textSize="140sp"
+        android:textColor="@color/blacky_teal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_player"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+
+        android:text="seconds\nremaining"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_counter"
+        app:layout_constraintStart_toEndOf="@+id/tv_counter" />
+
+    <TextView
+        android:id="@+id/tv_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="the player : Player One"
+        android:textSize="20sp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_target_number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_counter" />
+
+    <TextView
+        android:id="@+id/tv_target_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="target number : 15"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/tv_counted"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_player" />
+
+    <TextView
+        android:id="@+id/tv_counted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="counted : 0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_remaining_to_count"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_target_number" />
+
+    <TextView
+        android:id="@+id/tv_remaining_to_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="remaining to count : 10"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_counted" />
+
+    <ImageButton
+        android:id="@+id/ib_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+
+        android:background="@drawable/btn_background"
+        android:backgroundTint="@color/dark_pink"
+        android:padding="10dp"
+
+        android:src="@drawable/ic_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_player" />
+
+    <ImageButton
+        android:id="@+id/ib_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/btn_background"
+        android:backgroundTint="@color/dark_pink"
+        android:padding="10dp"
+        android:src="@drawable/ic_minus"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_remaining_to_count"
+        app:layout_constraintEnd_toEndOf="@+id/ib_plus"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ib_plus"
+        app:layout_constraintTop_toBottomOf="@+id/ib_plus" />
+
+    <TextView
+        android:id="@+id/stop_start_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+
+        android:text="start the timer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@color/dark_pink"
+        android:padding="6dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

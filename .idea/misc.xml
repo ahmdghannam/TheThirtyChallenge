@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Programming/AndroidStudio/From_zero_Apps/Tahady_AlThalathen/app/src/main/res/drawable/btn_background.xml" value="0.293" />
+        <entry key="..\:/Programming/AndroidStudio/From_zero_Apps/Tahady_AlThalathen/app/src/main/res/drawable/et_background.xml" value="0.293" />
+        <entry key="..\:/Programming/AndroidStudio/From_zero_Apps/Tahady_AlThalathen/app/src/main/res/drawable/ic_before.xml" value="0.2365" />
+        <entry key="..\:/Programming/AndroidStudio/From_zero_Apps/Tahady_AlThalathen/app/src/main/res/drawable/ic_reset.xml" value="0.2365" />
+        <entry key="..\:/Programming/AndroidStudio/From_zero_Apps/Tahady_AlThalathen/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Programming/AndroidStudio/From_zero_Apps/Tahady_AlThalathen/app/src/main/res/layout/activity_mazad_ch2.xml" value="0.33" />
+        <entry key="..\:/Programming/AndroidStudio/From_zero_Apps/Tahady_AlThalathen/app/src/main/res/layout/activity_mazad_ch25.xml" value="0.3125" />
+        <entry key="..\:/Programming/AndroidStudio/From_zero_Apps/Tahady_AlThalathen/app/src/main/res/layout/activity_ring_ch3.xml" value="0.3302083333333333" />
+        <entry key="..\:/Programming/AndroidStudio/From_zero_Apps/Tahady_AlThalathen/app/src/main/res/layout/activity_what_do_you_know_ch1.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
