@@ -1,21 +1,27 @@
-package fts.ahmed.tahady_althalathen
+package fts.ahmed.tahady_althalathen.views.startEnd
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.activity.ComponentActivity
 import androidx.lifecycle.MutableLiveData
 import com.google.android.material.snackbar.Snackbar
+import fts.ahmed.tahady_althalathen.R
+import fts.ahmed.tahady_althalathen.views.ChallengeOne.WhatDoYouKnow_ch1
 import fts.ahmed.tahady_althalathen.databinding.ActivityMainBinding
+import fts.ahmed.tahady_althalathen.models.Player
+import fts.ahmed.tahady_althalathen.utils.Values
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initBinding()
         btnsClickListener()
         initLiveData()
+
     }
 
     private fun initLiveData() {
@@ -42,8 +48,12 @@ class MainActivity : AppCompatActivity() {
             else {
                 Values.firstName = firstName
                 Values.secondName = secondName
+                Values.playersList =MutableLiveData<MutableList<Player>>()
+                Values.playersList.value= mutableListOf()
                 startActivity(Intent(this@MainActivity, WhatDoYouKnow_ch1::class.java))
+                finish()
             }
+
         }
     }
 

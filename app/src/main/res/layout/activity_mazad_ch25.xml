@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Mazad_ch25">
+    tools:context=".views.ChallengeTwo.Mazad_ch25">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -52,14 +52,19 @@
 
     <TextView
         android:id="@+id/tv_counter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:autoSizeMaxTextSize="200sp"
+        android:autoSizeTextType="uniform"
         android:text="30"
-        android:textSize="140sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
         android:textColor="@color/blacky_teal"
         app:layout_constraintBottom_toTopOf="@+id/tv_player"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:layout_constraintVertical_chainStyle="packed" />
@@ -67,12 +72,15 @@
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="10dp"
-
+android:layout_marginEnd="20dp"
         android:text="seconds\nremaining"
-        android:textSize="20sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="100sp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_counter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tv_counter" />
 
     <TextView
@@ -80,9 +88,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
         android:text="the player : Player One"
         android:textSize="20sp"
-        android:layout_marginTop="50dp"
         app:layout_constraintBottom_toTopOf="@+id/tv_target_number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_counter" />
@@ -120,7 +128,7 @@
         android:layout_marginTop="10dp"
         android:text="remaining to count : 10"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/stop_start_timer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_counted" />
 
@@ -160,15 +168,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
 
+        android:background="@color/dark_pink"
+        android:gravity="center"
+        android:padding="6dp"
         android:text="start the timer"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:textColor="@color/white"
-        android:background="@color/dark_pink"
-        android:padding="6dp"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

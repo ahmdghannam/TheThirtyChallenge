@@ -1,4 +1,4 @@
-package fts.ahmed.tahady_althalathen
+package fts.ahmed.tahady_althalathen.views.ChallengeTwo
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.SeekBar
 import com.google.android.material.snackbar.Snackbar
+import fts.ahmed.tahady_althalathen.R
+import fts.ahmed.tahady_althalathen.views.ChallengeThree.Ring_ch3
 import fts.ahmed.tahady_althalathen.databinding.ActivityMazadCh2Binding
+import fts.ahmed.tahady_althalathen.utils.Values
 
 class Mazad_ch2 : AppCompatActivity() {
     private lateinit var binding: ActivityMazadCh2Binding
@@ -20,14 +23,14 @@ class Mazad_ch2 : AppCompatActivity() {
     }
 
     private fun setupTvs() {
-        binding.rbFirstPlayer.text=Values.firstName
-        binding.rbSecondPlayer.text=Values.secondName
+        binding.rbFirstPlayer.text= Values.firstName
+        binding.rbSecondPlayer.text= Values.secondName
 
         Values.firstScore.observe(this){
-            binding.tvScore.text=Values.changeTheTitleScore()
+            binding.tvScore.text= Values.changeTheTitleScore()
         }
         Values.secondScore.observe(this){
-            binding.tvScore.text=Values.changeTheTitleScore()
+            binding.tvScore.text= Values.changeTheTitleScore()
         }
 
     }
@@ -45,15 +48,15 @@ class Mazad_ch2 : AppCompatActivity() {
         fun startTimer() {
             if (binding.radioGroup.checkedRadioButtonId == -1) createSnackBar(binding.root)
             else {
-                val intent=Intent(this@Mazad_ch2,Mazad_ch25::class.java)
-                val chosenPlayer=if (binding.radioGroup.checkedRadioButtonId==R.id.rb_first_player) 1 else 2
+                val intent=Intent(this@Mazad_ch2, Mazad_ch25::class.java)
+                val chosenPlayer=if (binding.radioGroup.checkedRadioButtonId== R.id.rb_first_player) 1 else 2
                 intent.putExtra("selected player",chosenPlayer.toString())
                 intent.putExtra("max raise",binding.seekBar.progress.toString())
                 startActivity(intent)
             }
         }
         binding.tvNext.setOnClickListener {
-            startActivity(Intent(this@Mazad_ch2,Ring_ch3::class.java))
+            startActivity(Intent(this@Mazad_ch2, Ring_ch3::class.java))
         }
         binding.ivTimer.setOnClickListener {
             startTimer()

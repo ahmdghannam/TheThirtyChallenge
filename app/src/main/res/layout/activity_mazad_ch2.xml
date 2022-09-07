@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Mazad_ch2">
+    tools:context=".views.ChallengeTwo.Mazad_ch2">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -66,6 +66,8 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="17sp"
         android:layout_marginStart="15dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="What is the maximum raise reached"
@@ -74,7 +76,6 @@
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintStart_toStartOf="@+id/seekBar"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-
         app:layout_constraintVertical_chainStyle="packed" />
 
     <SeekBar
@@ -137,12 +138,14 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="20sp"
         android:layout_marginTop="40dp"
         android:text="Who will do the challenge"
         android:textColor="@color/blacky_teal"
-        android:textSize="20sp"
         android:fontFamily="sans-serif-condensed-medium"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="@+id/seekBar"

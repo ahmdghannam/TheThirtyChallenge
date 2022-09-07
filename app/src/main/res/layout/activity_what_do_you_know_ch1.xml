@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WhatDoYouKnow_ch1">
+    tools:context=".views.ChallengeOne.WhatDoYouKnow_ch1">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -64,11 +64,9 @@
 
     <TextView
         android:id="@+id/tv_reset"
-        android:layout_width="361dp"
-        android:layout_height="51dp"
-        android:autoSizeMaxTextSize="25sp"
-        android:autoSizeMinTextSize="10sp"
-        android:autoSizeStepGranularity="2sp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="0.13"
         android:autoSizeTextType="uniform"
         android:drawablePadding="0dp"
 
@@ -86,6 +84,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_one"
+        app:layout_constraintVertical_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="20dp"
@@ -171,6 +170,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_two"
         android:layout_width="match_parent"
+        app:layout_constraintVertical_weight="1"
         android:layout_height="0dp"
         android:layout_margin="20dp"
         android:backgroundTint="@color/teal"

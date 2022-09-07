@@ -11,23 +11,34 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Tahady_AlThalathen"
+        android:theme="@style/batata.splash"
         tools:targetApi="31">
         <activity
-            android:name=".Ring_ch3"
+            android:name=".views.startEnd.FinalActivity"
             android:exported="false" />
         <activity
-            android:name=".Mazad_ch25"
+            android:name=".views.CallengeFour.Ch4_2_timer"
             android:exported="false" />
         <activity
-            android:name=".Mazad_ch2"
+            android:name=".views.CallengeFour.Ch4_1_Add"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".views.ChallengeThree.Ring_ch3"
             android:exported="false" />
         <activity
-            android:name=".WhatDoYouKnow_ch1"
+            android:name=".views.ChallengeTwo.Mazad_ch25"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".views.ChallengeTwo.Mazad_ch2"
+            android:exported="false" />
+        <activity
+            android:name=".views.ChallengeOne.WhatDoYouKnow_ch1"
+            android:exported="false" />
+        <activity
+            android:name=".views.startEnd.MainActivity"
             android:exported="true"
+            android:theme="@style/batata.splash"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

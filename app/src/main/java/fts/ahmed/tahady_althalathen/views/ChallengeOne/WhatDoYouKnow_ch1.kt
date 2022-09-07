@@ -1,12 +1,12 @@
-package fts.ahmed.tahady_althalathen
+package fts.ahmed.tahady_althalathen.views.ChallengeOne
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import fts.ahmed.tahady_althalathen.views.ChallengeTwo.Mazad_ch2
 import fts.ahmed.tahady_althalathen.databinding.ActivityWhatDoYouKnowCh1Binding
-import kotlin.math.max
-import kotlin.math.min
+import fts.ahmed.tahady_althalathen.utils.Values
 
 class WhatDoYouKnow_ch1 : AppCompatActivity() {
     private lateinit var binding: ActivityWhatDoYouKnowCh1Binding
@@ -26,10 +26,10 @@ class WhatDoYouKnow_ch1 : AppCompatActivity() {
         binding.tvPlayerTwo.text = Values.secondName
 
         Values.firstScore.observe(this){
-            binding.tvScore.text=Values.changeTheTitleScore()
+            binding.tvScore.text= Values.changeTheTitleScore()
         }
         Values.secondScore.observe(this){
-            binding.tvScore.text=Values.changeTheTitleScore()
+            binding.tvScore.text= Values.changeTheTitleScore()
         }
 
 

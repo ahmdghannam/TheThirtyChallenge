@@ -1,4 +1,4 @@
-package fts.ahmed.tahady_althalathen
+package fts.ahmed.tahady_althalathen.views.ChallengeTwo
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.Toast
 import fts.ahmed.tahady_althalathen.databinding.ActivityMazadCh25Binding
+import fts.ahmed.tahady_althalathen.utils.Values
 
 class Mazad_ch25 : AppCompatActivity() {
 
@@ -26,10 +27,10 @@ class Mazad_ch25 : AppCompatActivity() {
     private fun initLiveData() {
 
         Values.firstScore.observe(this){
-            binding.tvScore.text=Values.changeTheTitleScore()
+            binding.tvScore.text= Values.changeTheTitleScore()
         }
         Values.secondScore.observe(this){
-            binding.tvScore.text=Values.changeTheTitleScore()
+            binding.tvScore.text= Values.changeTheTitleScore()
         }
     }
 
@@ -40,7 +41,7 @@ class Mazad_ch25 : AppCompatActivity() {
         targetNumber = myIntent.getStringExtra("max raise")!!.toInt()
         binding.tvTargetNumber.text = "target number : ${targetNumber}"
         binding.tvRemainingToCount.text = "remaining to count: ${targetNumber - counted}"
-        binding.tvScore.text=Values.changeTheTitleScore()
+        binding.tvScore.text= Values.changeTheTitleScore()
 
     }
 
@@ -61,12 +62,16 @@ class Mazad_ch25 : AppCompatActivity() {
                 theTimerIsStopped = true
                 binding.stopStartTimer.text = "start the timer"
                 binding.tvCounter.text = "30"
+                counted=0
+                binding.tvCounted.text="counted : 0"
+                binding.tvRemainingToCount.text= "remaining number : ${(targetNumber)}"
             }
 
         }
         binding.ibPlus.setOnClickListener {
-            if (counted != targetNumber) {
-                binding.tvCounted.text = "counted : ${(++counted).toString()}"
+            if (theTimerIsStopped) Toast.makeText(applicationContext, "Start the timer to add", Toast.LENGTH_SHORT).show()
+            if (counted != targetNumber&& !theTimerIsStopped) {
+                binding.tvCounted.text = "counted : ${(++counted)}"
                 binding.tvRemainingToCount.text = "remaining number : ${(targetNumber - counted)}"
             }
 
