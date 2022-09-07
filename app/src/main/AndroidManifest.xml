@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/batata.splash"
+        android:theme="@style/Theme.Tahady_AlThalathen"
         tools:targetApi="31">
         <activity
             android:name=".views.startEnd.FinalActivity"
@@ -38,7 +38,6 @@
         <activity
             android:name=".views.startEnd.MainActivity"
             android:exported="true"
-            android:theme="@style/batata.splash"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
