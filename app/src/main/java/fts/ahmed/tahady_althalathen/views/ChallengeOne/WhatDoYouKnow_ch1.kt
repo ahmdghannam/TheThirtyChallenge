@@ -1,9 +1,12 @@
 package fts.ahmed.tahady_althalathen.views.ChallengeOne
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import fts.ahmed.tahady_althalathen.views.ChallengeTwo.Mazad_ch2
 import fts.ahmed.tahady_althalathen.databinding.ActivityWhatDoYouKnowCh1Binding
 import fts.ahmed.tahady_althalathen.utils.Values
@@ -12,6 +15,7 @@ class WhatDoYouKnow_ch1 : AppCompatActivity() {
     private lateinit var binding: ActivityWhatDoYouKnowCh1Binding
     private var missP1 = 0
     private var missP2 = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initBinding()
@@ -24,17 +28,15 @@ class WhatDoYouKnow_ch1 : AppCompatActivity() {
 
         binding.tvPlayerOne.text = Values.firstName
         binding.tvPlayerTwo.text = Values.secondName
-
-        Values.firstScore.observe(this){
-            binding.tvScore.text= Values.changeTheTitleScore()
+        Values.firstScore.observe(this) {
+            binding.tvScore.text = Values.changeTheTitleScore()
         }
-        Values.secondScore.observe(this){
-            binding.tvScore.text= Values.changeTheTitleScore()
+        Values.secondScore.observe(this) {
+            binding.tvScore.text = Values.changeTheTitleScore()
         }
 
 
     }
-
 
     private fun ClickListeners() {
 
@@ -99,7 +101,18 @@ class WhatDoYouKnow_ch1 : AppCompatActivity() {
             }
         }
         binding.tvNext.setOnClickListener {
-            startActivity(Intent(this@WhatDoYouKnow_ch1, Mazad_ch2::class.java))
+            val total = Values.totalMatchesInt()
+            val boolean=total < 10
+            if (boolean)
+                Toast.makeText(
+                    this@WhatDoYouKnow_ch1,
+                    "There's ${10 - total} rounds left.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            else {
+                startActivity(Intent(this@WhatDoYouKnow_ch1, Mazad_ch2::class.java))
+                finish()
+            }
         }
 
     }
@@ -107,5 +120,31 @@ class WhatDoYouKnow_ch1 : AppCompatActivity() {
     private fun initBinding() {
         binding = ActivityWhatDoYouKnowCh1Binding.inflate(layoutInflater)
         setContentView(binding.root)
+    }
+    override fun onBackPressed() {
+        alertDialog()
+    }
+    private fun alertDialog(): Boolean {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this@WhatDoYouKnow_ch1)
+        builder.setMessage("Do you want to end the game ?")
+        builder.setCancelable(true)
+
+        var heIsSure = false
+
+        builder.setPositiveButton(
+            "Yes",
+            DialogInterface.OnClickListener{ dialog, id->
+                heIsSure = true
+                super.onBackPressed()
+                dialog.cancel()
+            })
+
+        builder.setNegativeButton(
+            "No",
+            DialogInterface.OnClickListener{ dialog, id->dialog.cancel()})
+
+        val alert: AlertDialog = builder.create()
+        alert.show()
+        return heIsSure
     }
 }

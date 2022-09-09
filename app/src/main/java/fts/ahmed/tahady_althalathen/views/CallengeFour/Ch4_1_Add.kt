@@ -1,5 +1,7 @@
 package fts.ahmed.tahady_althalathen.views.CallengeFour
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +13,7 @@ import fts.ahmed.diaryapp.PlayersAdapter
 import fts.ahmed.tahady_althalathen.databinding.ActivityCh41AddBinding
 import fts.ahmed.tahady_althalathen.models.Player
 import fts.ahmed.tahady_althalathen.utils.Values
+import fts.ahmed.tahady_althalathen.views.ChallengeThree.Ring_ch3
 import fts.ahmed.tahady_althalathen.views.startEnd.FinalActivity
 import kotlin.random.Random
 
@@ -77,11 +80,25 @@ class Ch4_1_Add : AppCompatActivity() {
 
         }
         binding.tvNext.setOnClickListener {
-            val intent=Intent(this@Ch4_1_Add,FinalActivity::class.java)
-            intent.putExtra("winner",Values.getWinner())
-            intent.putExtra("result",Values.score(""))
-            intent.putExtra("totalMatches",Values.totalMatches())
-            startActivity(intent)
+
+            val total = Values.totalMatchesInt()
+            val boolean =total < 29
+            if (boolean)
+                Toast.makeText(
+                    this@Ch4_1_Add,
+                    "There's ${29 - total} rounds left.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            else {
+                val intent=Intent(this@Ch4_1_Add,FinalActivity::class.java)
+                intent.putExtra("winner",Values.getWinner())
+                intent.putExtra("result",Values.score(""))
+                intent.putExtra("totalMatches",Values.totalMatches())
+                startActivity(intent)
+                finish()
+            }
+
+
         }
     }
 
@@ -108,5 +125,31 @@ class Ch4_1_Add : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         if (Values.playersList.value?.isNotEmpty() == true) showRv()
+    }
+    override fun onBackPressed() {
+        backAlertDialog()
+    }
+    private fun backAlertDialog(): Boolean {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this@Ch4_1_Add)
+        builder.setMessage("Do you want to end the game ?")
+        builder.setCancelable(true)
+
+        var heIsSure = false
+
+        builder.setPositiveButton(
+            "Yes",
+            DialogInterface.OnClickListener{ dialog, id->
+                heIsSure = true
+                super.onBackPressed()
+                dialog.cancel()
+            })
+
+        builder.setNegativeButton(
+            "No",
+            DialogInterface.OnClickListener{ dialog, id->dialog.cancel()})
+
+        val alert: AlertDialog = builder.create()
+        alert.show()
+        return heIsSure
     }
 }

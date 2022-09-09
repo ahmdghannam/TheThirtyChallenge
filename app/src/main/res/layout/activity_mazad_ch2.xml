@@ -28,14 +28,14 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:title="CH2"
+                app:title="@string/ch2"
                 app:titleTextColor="@color/white" />
 
             <TextView
                 android:id="@+id/tv_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0:0"
+                android:text="@string/_0_0"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/toolbar"
@@ -70,7 +70,7 @@
         android:autoSizeMaxTextSize="17sp"
         android:layout_marginStart="15dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="What is the maximum raise reached"
+        android:text="@string/what_is_the_maximum_raise_reached"
         android:textColor="@color/blacky_teal"
         android:textSize="19sp"
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
@@ -110,10 +110,8 @@
     <ImageButton
         android:id="@+id/iv_next"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:backgroundTint="@color/grey_teal"
-
         android:src="@drawable/ic_next"
         app:layout_constraintBottom_toBottomOf="@+id/tv_seekbar_progress"
         app:layout_constraintEnd_toEndOf="parent"
@@ -124,7 +122,6 @@
     <ImageButton
         android:id="@+id/iv_before"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:backgroundTint="@color/grey_teal"
         android:src="@drawable/ic_before"
@@ -144,7 +141,7 @@
         android:autoSizeTextType="uniform"
         android:autoSizeMaxTextSize="20sp"
         android:layout_marginTop="40dp"
-        android:text="Who will do the challenge"
+        android:text="@string/who_will_do_the_challenge"
         android:textColor="@color/blacky_teal"
         android:fontFamily="sans-serif-condensed-medium"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
@@ -167,7 +164,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="first player"
+            android:text="@string/player_one"
             android:textColor="@color/blacky_teal"
             android:textSize="20sp" />
 
@@ -176,7 +173,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="second player"
+            android:text="@string/player_two"
             android:textColor="@color/blacky_teal"
             android:textSize="20sp" />
     </RadioGroup>
@@ -187,7 +184,7 @@
         android:layout_width="95dp"
         android:layout_height="33dp"
         android:layout_marginTop="8dp"
-        android:text="start Timer"
+        android:text="@string/start_timer"
         android:fontFamily="sans-serif-smallcaps"
         android:textSize="15sp"
         android:gravity="center"

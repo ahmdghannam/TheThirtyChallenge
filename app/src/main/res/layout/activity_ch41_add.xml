@@ -28,7 +28,7 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:title="CH4"
+                app:title="@string/ch4"
                 app:titleTextColor="@color/white" />
 
             <TextView
@@ -50,7 +50,7 @@
                 android:layout_marginEnd="8dp"
                 android:drawableEnd="@drawable/ic_next"
                 android:gravity="center"
-                android:text="finish game"
+                android:text="@string/finish"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +83,7 @@
 
         android:background="@drawable/et_background"
         android:ems="10"
-        android:hint="Name"
+        android:hint="@string/name"
         android:inputType="textPersonName"
         android:padding="12dp"
         android:paddingStart="20dp"
@@ -101,7 +101,7 @@
         android:layout_width="0dp"
         app:layout_constraintHorizontal_weight="1"
         android:layout_height="wrap_content"
-        android:text="add"
+        android:text="@string/add"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/et_name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,7 +121,7 @@
         android:autoSizeMaxTextSize="25sp"
         android:gravity="center"
         android:autoSizeTextType="uniform"
-        android:text="There is no items to show"
+        android:text="@string/there_is_no_items_to_show"
 
         app:layout_constraintBottom_toTopOf="@+id/et_name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -133,7 +133,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/pink"
-        android:text="start the guess"
+        android:text="@string/start_the_guess"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

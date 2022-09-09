@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">30ch</string>
+    <string name="the_thirty_challenge">The Thirty Challenge</string>
+    <string name="player_one">player One</string>
+    <string name="player_two">player Two</string>
+    <string name="next">Next</string>
+    <string name="press_this_card_to_add_a_miss">press this card to add a miss</string>
+    <string name="ch1_what_do_you_know">CH1: What Do You Know ?</string>
+    <string name="_0_0">0:0</string>
+    <string name="ch1">CH1</string>
+    <string name="ch2">CH2</string>
+    <string name="what_is_the_maximum_raise_reached">What is the maximum raise reached</string>
+    <string name="who_will_do_the_challenge">Who will do the challenge</string>
+    <string name="start_timer">start Timer</string>
+    <string name="_30">30</string>
+    <string name="the_player_player_one">the player : Player One</string>
+    <string name="target_number_15">target number : 15</string>
+    <string name="counted_0">counted : 0</string>
+    <string name="remaining_to_count_10">remaining to count : 10</string>
+    <string name="start_the_timer">start the timer</string>
+    <string name="seconds_remaining">seconds\nremaining</string>
+    <string name="press_this_card_to_have_a_chance">press this card to have a chance</string>
+    <string name="ch3_the_ring_challenge">CH3: The Ring challenge</string>
+    <string name="there_is_no_items_to_show">There is no items to show</string>
+    <string name="finish">finish</string>
+    <string name="add">add</string>
+    <string name="name">Name</string>
+    <string name="start_the_guess">start the guess</string>
+    <string name="ch4">CH4</string>
+    <string name="ch3">CH3</string>
+    <string name="let_him_guess">Let him guess :</string>
 </resources>

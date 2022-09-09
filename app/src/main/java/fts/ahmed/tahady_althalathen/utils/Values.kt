@@ -15,11 +15,7 @@ object Values {
     var playersID=0
 
     public fun changeTheTitleScore(): String {
-        val concatName =
-            if (firstScore.value!! > secondScore.value!!) firstName
-            else if (firstScore.value!! < secondScore.value!!) secondName
-            else "Draw"
-
+        val concatName = getWinner()
         val title = score(concatName)
         return title
     }
@@ -42,12 +38,17 @@ object Values {
     }
 
     fun getWinner(): String {
-        val winner= if (firstScore.value!! > secondScore.value!!) firstName else secondName
+        val winner= if (firstScore.value!! > secondScore.value!!) firstName
+        else if (firstScore.value!! < secondScore.value!!) secondName
+        else "Draw"
         return winner
     }
 
     fun totalMatches(): String {
         return (secondScore.value?.let { firstScore.value?.plus(it) }) .toString()
+    }
+    fun totalMatchesInt(): Int {
+        return (secondScore.value!!.let { firstScore.value!!.plus(it)})
     }
 
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">30ch</string>
+    <string name="the_thirty_challenge">تحدي الثلاثين</string>
+    <string name="player_one">اللاعب الاول</string>
+    <string name="player_two">اللاعب الثاني</string>
+    <string name="next">التالي</string>
+    <string name="press_this_card_to_add_a_miss">اضغط لاضافة خطأ</string>
+    <string name="ch1_what_do_you_know">جزء1 : ماذا تعرف ؟ </string>
+    <string name="_0_0">0:0</string>
+    <string name="ch1">جزء1</string>
+    <string name="ch2">جزء2</string>
+    <string name="what_is_the_maximum_raise_reached">ما اعلى قيمة وصلت</string>
+    <string name="who_will_do_the_challenge">من سيقوم بالتحدي</string>
+    <string name="start_timer">شغل المؤقت</string>
+    <string name="_30">30</string>
+    <string name="the_player_player_one">اللاعب: اللاعب الاول</string>
+    <string name="target_number_15">الهدف:</string>
+    <string name="counted_0">تم عد :</string>
+    <string name="remaining_to_count_10">المتبقي:</string>
+    <string name="start_the_timer">شغل المؤقت</string>
+    <string name="seconds_remaining">ثانية متبقي</string>
+    <string name="press_this_card_to_have_a_chance">اضغط للاجابة</string>
+    <string name="ch3_the_ring_challenge">الجزء 3 : تحدي الجرس</string>
+    <string name="there_is_no_items_to_show">لا يوجد عناصر</string>
+    <string name="finish">انهاء</string>
+    <string name="add">اضافة</string>
+    <string name="name">الاسم</string>
+    <string name="start_the_guess">ابدأ التوقع</string>
+    <string name="ch4">جزء4</string>
+    <string name="ch3">جزء3</string>
+    <string name="let_him_guess">من سيخمن :</string>
+</resources>

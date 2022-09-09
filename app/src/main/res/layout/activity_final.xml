@@ -33,31 +33,45 @@
         android:layout_height="0dp"
         android:layout_margin="10dp"
         android:text="result : 4:5"
+        android:background="@drawable/et_background"
         android:gravity="center"
-        android:textColor="@color/main_text_color"
+        android:textColor="@color/teal"
         android:autoSizeTextType="uniform"
         android:autoSizeMaxTextSize="35sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tv_total_matches"
+        app:layout_constraintBottom_toTopOf="@+id/tv_restart_game"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_congrates" />
 
     <TextView
-        android:id="@+id/tv_total_matches"
+        android:id="@+id/tv_restart_game"
         app:layout_constraintVertical_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:gravity="center_horizontal"
         android:layout_marginTop="8dp"
-        android:text="total maches played : 9"
+        android:text="restart The game"
+
+        android:textColor="@color/blacky_teal"
         android:autoSizeTextType="uniform"
         android:autoSizeMaxTextSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_result" />
+
+    <ImageView
+        android:layout_width="94dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="4dp"
+
+        android:src="@drawable/ic_reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/tv_restart_game" />
 
     <ImageView
         android:id="@+id/iv_winner"

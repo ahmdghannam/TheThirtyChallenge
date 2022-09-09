@@ -62,7 +62,19 @@ class Ring_ch3 : AppCompatActivity() {
             startTimerOnCardTwo()
         }
         binding.tvNext.setOnClickListener {
-            startActivity(Intent(this@Ring_ch3,Ch4_1_Add::class.java))
+            val total = Values.totalMatchesInt()
+            val boolean =total < 24
+            if (boolean)
+                Toast.makeText(
+                    this@Ring_ch3,
+                    "There's ${24 - total} rounds left.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            else {
+                startActivity(Intent(this@Ring_ch3,Ch4_1_Add::class.java))
+                finish()
+            }
+
 
         }
     }
@@ -128,7 +140,7 @@ class Ring_ch3 : AppCompatActivity() {
     private fun alertDialog(): Boolean {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this@Ring_ch3)
         builder.setMessage("for the Referee :\n Who is the winner ?")
-        builder.setCancelable(true)
+        builder.setCancelable(false)
         var heIsSure = false
         builder.setPositiveButton(
             Values.firstName,
@@ -146,6 +158,33 @@ class Ring_ch3 : AppCompatActivity() {
                 Toast.makeText(this, "${Values.secondName} gets a point", Toast.LENGTH_SHORT).show()
                 dialog.cancel()
             })
+
+        val alert: AlertDialog = builder.create()
+        alert.show()
+        return heIsSure
+    }
+
+    override fun onBackPressed() {
+        backAlertDialog()
+    }
+    private fun backAlertDialog(): Boolean {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this@Ring_ch3)
+        builder.setMessage("Do you want to end the game ?")
+        builder.setCancelable(true)
+
+        var heIsSure = false
+
+        builder.setPositiveButton(
+            "Yes",
+            DialogInterface.OnClickListener{ dialog, id->
+                heIsSure = true
+                super.onBackPressed()
+                dialog.cancel()
+            })
+
+        builder.setNegativeButton(
+            "No",
+            DialogInterface.OnClickListener{dialog, id->dialog.cancel()})
 
         val alert: AlertDialog = builder.create()
         alert.show()

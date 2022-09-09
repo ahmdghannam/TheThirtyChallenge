@@ -1,10 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Tahady_AlThalathen" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.TahadyAlThalathen" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#05BDAB</item>
         <item name="colorPrimaryVariant">#05BDAB</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
     </style>
+
 </resources>
